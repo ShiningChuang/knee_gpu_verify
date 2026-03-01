@@ -1,0 +1,342 @@
+[
+  {
+    "gpu_pct": 40,
+    "decode_steps": 10,
+    "input_len": 512,
+    "categories": {
+      "Memory / Indexing": 862.3308000000179,
+      "Elementwise": 215.37040000003753,
+      "Other": 31.545600000003013,
+      "LayerNorm": 308.3858000000124,
+      "GEMM / MatMul": 6636.750499999995
+    },
+    "total_us": 8054.3831000000655,
+    "top_kernels": [
+      {
+        "name": "void gemv2T_kernel_val<int, int, __half, __half, __half, float, 128, 16, 4, 4, false, true, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half>, float> >(cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half>, float>, float, float)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 32476.971999999994,
+        "count": 1200,
+        "avg_us": 27.06414333333333
+      },
+      {
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_f16_s161616gemm_f16_16x16_64x2_tn_align8>(cutlass_70_wmma_tensorop_f16_s161616gemm_f16_16x16_64x2_tn_align8::Params)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 20072.797000000093,
+        "count": 250,
+        "avg_us": 80.29118800000037
+      },
+      {
+        "name": "fmha_cutlassF_f16_aligned_64x64_rf_sm70(PyTorchMemEffAttention::AttentionKernel<cutlass::half_t, cutlass::arch::Sm70, true, 64, 64, 64, true, true>::Params)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 13817.735999999859,
+        "count": 240,
+        "avg_us": 57.57389999999941
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::CatArrayBatchedCopy_contig<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 4, 128, 1>(at::native::(anonymous namespace)::OpaqueType<2u>*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",
+        "category": "Memory / Indexing",
+        "total_cuda_us": 8555.692000000206,
+        "count": 480,
+        "avg_us": 17.824358333333763
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c10::Half, float>(int, float, c10::Half const*, c10::Half const*, c10::Half const*, float*, float*, c10::Half*)",
+        "category": "LayerNorm",
+        "total_cuda_us": 3083.858000000124,
+        "count": 490,
+        "avg_us": 6.293587755102293
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::Half>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<c10::Half>, at::detail::Array<char*, 3>)",
+        "category": "Elementwise",
+        "total_cuda_us": 1029.9910000002228,
+        "count": 490,
+        "avg_us": 2.1020224489800468
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::Half)#1}, at::detail::Array<char*, 2> >(int, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::Half)#1}, at::detail::Array<char*, 2>)",
+        "category": "Elementwise",
+        "total_cuda_us": 535.2929999999355,
+        "count": 240,
+        "avg_us": 2.2303874999997313
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<c10::Half, c10::Half, c10::Half, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 2> >(int, at::native::AUnaryFunctor<c10::Half, c10::Half, c10::Half, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 2>)",
+        "category": "Elementwise",
+        "total_cuda_us": 406.4350000001559,
+        "count": 240,
+        "avg_us": 1.6934791666673163
+      },
+      {
+        "name": "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<c10::Half, at::native::ArgMaxOps<float>, unsigned int, long, 4> >(at::native::ReduceOp<c10::Half, at::native::ArgMaxOps<float>, unsigned int, long, 4>)",
+        "category": "Other",
+        "total_cuda_us": 216.89700000001176,
+        "count": 10,
+        "avg_us": 21.689700000001174
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::indexSelectSmallIndex<c10::Half, long, unsigned int, 2, 2, -2>(at::cuda::detail::TensorInfo<c10::Half, unsigned int>, at::cuda::detail::TensorInfo<c10::Half const, unsigned int>, at::cuda::detail::TensorInfo<long const, unsigned int>, int, int, unsigned int, long)",
+        "category": "Memory / Indexing",
+        "total_cuda_us": 53.31299999998646,
+        "count": 20,
+        "avg_us": 2.665649999999323
+      }
+    ]
+  },
+  {
+    "gpu_pct": 30,
+    "decode_steps": 10,
+    "input_len": 512,
+    "categories": {
+      "Memory / Indexing": 1053.831500000001,
+      "Elementwise": 211.1469000000008,
+      "Other": 30.930499999993526,
+      "LayerNorm": 301.9894999999875,
+      "GEMM / MatMul": 7994.624499999969
+    },
+    "total_us": 9592.522899999953,
+    "top_kernels": [
+      {
+        "name": "void gemv2T_kernel_val<int, int, __half, __half, __half, float, 128, 16, 4, 4, false, true, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half>, float> >(cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half>, float>, float, float)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 41424.68999999976,
+        "count": 1200,
+        "avg_us": 34.5205749999998
+      },
+      {
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_f16_s161616gemm_f16_16x16_64x2_tn_align8>(cutlass_70_wmma_tensorop_f16_s161616gemm_f16_16x16_64x2_tn_align8::Params)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 24738.192999999843,
+        "count": 250,
+        "avg_us": 98.95277199999937
+      },
+      {
+        "name": "fmha_cutlassF_f16_aligned_64x64_rf_sm70(PyTorchMemEffAttention::AttentionKernel<cutlass::half_t, cutlass::arch::Sm70, true, 64, 64, 64, true, true>::Params)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 13783.362000000086,
+        "count": 240,
+        "avg_us": 57.43067500000036
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::CatArrayBatchedCopy_contig<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 4, 128, 1>(at::native::(anonymous namespace)::OpaqueType<2u>*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",
+        "category": "Memory / Indexing",
+        "total_cuda_us": 10472.236000000072,
+        "count": 480,
+        "avg_us": 21.817158333333484
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c10::Half, float>(int, float, c10::Half const*, c10::Half const*, c10::Half const*, float*, float*, c10::Half*)",
+        "category": "LayerNorm",
+        "total_cuda_us": 3019.8949999998754,
+        "count": 490,
+        "avg_us": 6.1630510204079085
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::Half>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<c10::Half>, at::detail::Array<char*, 3>)",
+        "category": "Elementwise",
+        "total_cuda_us": 1014.247999999789,
+        "count": 490,
+        "avg_us": 2.06989387755059
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::Half)#1}, at::detail::Array<char*, 2> >(int, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::Half)#1}, at::detail::Array<char*, 2>)",
+        "category": "Elementwise",
+        "total_cuda_us": 522.5930000001058,
+        "count": 240,
+        "avg_us": 2.177470833333774
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<c10::Half, c10::Half, c10::Half, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 2> >(int, at::native::AUnaryFunctor<c10::Half, c10::Half, c10::Half, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 2>)",
+        "category": "Elementwise",
+        "total_cuda_us": 396.9620000000132,
+        "count": 240,
+        "avg_us": 1.6540083333333881
+      },
+      {
+        "name": "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<c10::Half, at::native::ArgMaxOps<float>, unsigned int, long, 4> >(at::native::ReduceOp<c10::Half, at::native::ArgMaxOps<float>, unsigned int, long, 4>)",
+        "category": "Other",
+        "total_cuda_us": 211.23000000001775,
+        "count": 10,
+        "avg_us": 21.123000000001774
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::indexSelectSmallIndex<c10::Half, long, unsigned int, 2, 2, -2>(at::cuda::detail::TensorInfo<c10::Half, unsigned int>, at::cuda::detail::TensorInfo<c10::Half const, unsigned int>, at::cuda::detail::TensorInfo<long const, unsigned int>, int, int, unsigned int, long)",
+        "category": "Memory / Indexing",
+        "total_cuda_us": 51.870999999971446,
+        "count": 20,
+        "avg_us": 2.5935499999985723
+      }
+    ]
+  },
+  {
+    "gpu_pct": 80,
+    "decode_steps": 10,
+    "input_len": 512,
+    "categories": {
+      "Memory / Indexing": 514.4757999999805,
+      "Elementwise": 198.57949999997913,
+      "Other": 96.36730000000003,
+      "LayerNorm": 294.1012999999846,
+      "GEMM / MatMul": 5209.940699999986
+    },
+    "total_us": 6313.46459999993,
+    "top_kernels": [
+      {
+        "name": "void gemv2T_kernel_val<int, int, __half, __half, __half, float, 128, 16, 4, 4, false, true, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half>, float> >(cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half>, float>, float, float)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 24906.231999999887,
+        "count": 1200,
+        "avg_us": 20.75519333333324
+      },
+      {
+        "name": "fmha_cutlassF_f16_aligned_64x64_rf_sm70(PyTorchMemEffAttention::AttentionKernel<cutlass::half_t, cutlass::arch::Sm70, true, 64, 64, 64, true, true>::Params)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 13549.30999999987,
+        "count": 240,
+        "avg_us": 56.45545833333279
+      },
+      {
+        "name": "void gemv2T_kernel_val<int, int, __half, float, float, float, 128, 16, 4, 4, false, true, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float> >(cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float>, float, float)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 10380.76500000001,
+        "count": 240,
+        "avg_us": 43.253187500000045
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::CatArrayBatchedCopy_contig<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 4, 128, 1>(at::native::(anonymous namespace)::OpaqueType<2u>*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",
+        "category": "Memory / Indexing",
+        "total_cuda_us": 5076.499999999776,
+        "count": 480,
+        "avg_us": 10.576041666666201
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c10::Half, float>(int, float, c10::Half const*, c10::Half const*, c10::Half const*, float*, float*, c10::Half*)",
+        "category": "LayerNorm",
+        "total_cuda_us": 2941.0129999998458,
+        "count": 490,
+        "avg_us": 6.0020673469384604
+      },
+      {
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_f16_s161616gemm_f16_16x16_64x2_tn_align8>(cutlass_70_wmma_tensorop_f16_s161616gemm_f16_16x16_64x2_tn_align8::Params)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 2477.753000000019,
+        "count": 10,
+        "avg_us": 247.7753000000019
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::Half>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<c10::Half>, at::detail::Array<char*, 3>)",
+        "category": "Elementwise",
+        "total_cuda_us": 887.8759999999761,
+        "count": 490,
+        "avg_us": 1.811991836734645
+      },
+      {
+        "name": "void splitKreduce_kernel<32, 16, int, float, __half, float, __half, true, false, false>(cublasSplitKParams<float>, float const*, __half const*, __half*, float const*, float const*, __half const*, float const*, __half*, void*, long, float*, int*)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 785.3470000000702,
+        "count": 240,
+        "avg_us": 3.2722791666669595
+      },
+      {
+        "name": "void cublasLt::epilogue::impl::globalKernel<8, 32, __half, __half, float, true, true, 1>(int, int, long, __half*, cublasLtEpilogue_t, int, __half*, long, void*, long, long, long, float*, long, int*)",
+        "category": "Other",
+        "total_cuda_us": 648.2820000000274,
+        "count": 240,
+        "avg_us": 2.7011750000001142
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::Half)#1}, at::detail::Array<char*, 2> >(int, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::Half)#1}, at::detail::Array<char*, 2>)",
+        "category": "Elementwise",
+        "total_cuda_us": 511.582999999865,
+        "count": 240,
+        "avg_us": 2.131595833332771
+      }
+    ]
+  },
+  {
+    "gpu_pct": 70,
+    "decode_steps": 10,
+    "input_len": 512,
+    "categories": {
+      "Memory / Indexing": 559.8730999999867,
+      "Elementwise": 200.8248999999733,
+      "Other": 30.246100000006162,
+      "LayerNorm": 298.3908999999919,
+      "GEMM / MatMul": 5210.983000000021
+    },
+    "total_us": 6300.317999999979,
+    "top_kernels": [
+      {
+        "name": "void gemv2T_kernel_val<int, int, __half, __half, __half, float, 128, 16, 4, 4, false, true, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half>, float> >(cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half const>, cublasGemvTensorStridedBatched<__half>, float>, float, float)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 36447.67100000028,
+        "count": 1440,
+        "avg_us": 25.310882638889083
+      },
+      {
+        "name": "fmha_cutlassF_f16_aligned_64x64_rf_sm70(PyTorchMemEffAttention::AttentionKernel<cutlass::half_t, cutlass::arch::Sm70, true, 64, 64, 64, true, true>::Params)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 13135.190999999979,
+        "count": 240,
+        "avg_us": 54.729962499999914
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::CatArrayBatchedCopy_contig<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 4, 128, 1>(at::native::(anonymous namespace)::OpaqueType<2u>*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",
+        "category": "Memory / Indexing",
+        "total_cuda_us": 5535.848999999884,
+        "count": 480,
+        "avg_us": 11.533018749999759
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c10::Half, float>(int, float, c10::Half const*, c10::Half const*, c10::Half const*, float*, float*, c10::Half*)",
+        "category": "LayerNorm",
+        "total_cuda_us": 2983.908999999919,
+        "count": 490,
+        "avg_us": 6.089610204081468
+      },
+      {
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_f16_s161616gemm_f16_16x16_64x2_tn_align8>(cutlass_70_wmma_tensorop_f16_s161616gemm_f16_16x16_64x2_tn_align8::Params)",
+        "category": "GEMM / MatMul",
+        "total_cuda_us": 2526.967999999957,
+        "count": 10,
+        "avg_us": 252.6967999999957
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::Half>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<c10::Half>, at::detail::Array<char*, 3>)",
+        "category": "Elementwise",
+        "total_cuda_us": 964.9519999998083,
+        "count": 490,
+        "avg_us": 1.9692897959179763
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::Half)#1}, at::detail::Array<char*, 2> >(int, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#8}::operator()() const::{lambda(c10::Half)#1}, at::detail::Array<char*, 2>)",
+        "category": "Elementwise",
+        "total_cuda_us": 476.0630000001247,
+        "count": 240,
+        "avg_us": 1.983595833333853
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<c10::Half, c10::Half, c10::Half, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 2> >(int, at::native::AUnaryFunctor<c10::Half, c10::Half, c10::Half, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 2>)",
+        "category": "Elementwise",
+        "total_cuda_us": 393.2479999999505,
+        "count": 240,
+        "avg_us": 1.638533333333127
+      },
+      {
+        "name": "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<c10::Half, at::native::ArgMaxOps<float>, unsigned int, long, 4> >(at::native::ReduceOp<c10::Half, at::native::ArgMaxOps<float>, unsigned int, long, 4>)",
+        "category": "Other",
+        "total_cuda_us": 207.58299999996598,
+        "count": 10,
+        "avg_us": 20.7582999999966
+      },
+      {
+        "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#11}::operator()() const::{lambda(bool)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#11}::operator()() const::{lambda(bool)#1}, at::detail::Array<char*, 2>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+        "category": "Elementwise",
+        "total_cuda_us": 49.24999999999636,
+        "count": 10,
+        "avg_us": 4.924999999999637
+      }
+    ]
+  }
+]

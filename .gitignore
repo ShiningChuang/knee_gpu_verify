@@ -1,0 +1,8 @@
+# Temporary test scripts
+test_*.py
+_stability_worker.py
+
+# Large result files (kept locally, not in repo)
+# Uncomment below if you want to exclude JSON/PNG too
+# *.json
+# *.png

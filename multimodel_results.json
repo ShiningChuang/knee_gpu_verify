@@ -1,0 +1,362 @@
+[
+  {
+    "model_id": "facebook/opt-1.3b",
+    "gpu_pct": 20,
+    "input_len": 512,
+    "prefill_ms": 78.51495523937047,
+    "prefill_std": 0.02284238518308731,
+    "decode_ms": 18.554019213479478,
+    "decode_std": 0.03214046567252438,
+    "mem_gb": 2.63151616
+  },
+  {
+    "model_id": "facebook/opt-1.3b",
+    "gpu_pct": 30,
+    "input_len": 512,
+    "prefill_ms": 56.402885500574484,
+    "prefill_std": 0.09510143787020589,
+    "decode_ms": 15.098328008025419,
+    "decode_std": 0.045000331861597936,
+    "mem_gb": 2.63151616
+  },
+  {
+    "model_id": "facebook/opt-1.3b",
+    "gpu_pct": 40,
+    "input_len": 512,
+    "prefill_ms": 39.86924850323703,
+    "prefill_std": 0.012197983714218137,
+    "decode_ms": 14.428089583816472,
+    "decode_std": 0.034822365278474175,
+    "mem_gb": 2.63151616
+  },
+  {
+    "model_id": "facebook/opt-1.3b",
+    "gpu_pct": 50,
+    "input_len": 512,
+    "prefill_ms": 36.93311025563162,
+    "prefill_std": 0.0969222074647331,
+    "decode_ms": 14.324556348340897,
+    "decode_std": 0.05746953409104669,
+    "mem_gb": 2.63151616
+  },
+  {
+    "model_id": "facebook/opt-1.3b",
+    "gpu_pct": 60,
+    "input_len": 512,
+    "prefill_ms": 31.23639425029978,
+    "prefill_std": 0.03543370298391114,
+    "decode_ms": 14.736731612356378,
+    "decode_std": 0.04276644400364548,
+    "mem_gb": 2.63151616
+  },
+  {
+    "model_id": "facebook/opt-1.3b",
+    "gpu_pct": 70,
+    "input_len": 512,
+    "prefill_ms": 30.083794001257047,
+    "prefill_std": 0.04367373447889933,
+    "decode_ms": 14.436939109873492,
+    "decode_std": 0.03855077621032759,
+    "mem_gb": 2.63151616
+  },
+  {
+    "model_id": "facebook/opt-1.3b",
+    "gpu_pct": 80,
+    "input_len": 512,
+    "prefill_ms": 23.2787275017472,
+    "prefill_std": 0.011258844778641046,
+    "decode_ms": 14.495457925174076,
+    "decode_std": 0.023412964487950428,
+    "mem_gb": 2.63151616
+  },
+  {
+    "model_id": "facebook/opt-1.3b",
+    "gpu_pct": 90,
+    "input_len": 512,
+    "prefill_ms": 23.150003515183926,
+    "prefill_std": 0.02284426653037442,
+    "decode_ms": 18.04965821065707,
+    "decode_std": 0.03376701280959536,
+    "mem_gb": 2.63151616
+  },
+  {
+    "model_id": "facebook/opt-1.3b",
+    "gpu_pct": 100,
+    "input_len": 512,
+    "prefill_ms": 22.266248997766525,
+    "prefill_std": 0.02353766312051486,
+    "decode_ms": 14.353798050918462,
+    "decode_std": 0.058937489061704644,
+    "mem_gb": 2.63151616
+  },
+  {
+    "model_id": "Qwen/Qwen2-1.5B",
+    "gpu_pct": 20,
+    "input_len": 512,
+    "prefill_ms": 128.67516675032675,
+    "prefill_std": 0.0751142613979429,
+    "decode_ms": 37.85336203776144,
+    "decode_std": 0.0316513611150985,
+    "mem_gb": 3.087429632
+  },
+  {
+    "model_id": "Qwen/Qwen2-1.5B",
+    "gpu_pct": 30,
+    "input_len": 512,
+    "prefill_ms": 89.53401751932688,
+    "prefill_std": 0.04787268979690588,
+    "decode_ms": 37.21932169282809,
+    "decode_std": 0.1509801843728909,
+    "mem_gb": 3.087429632
+  },
+  {
+    "model_id": "Qwen/Qwen2-1.5B",
+    "gpu_pct": 40,
+    "input_len": 512,
+    "prefill_ms": 74.96730324055534,
+    "prefill_std": 0.08445559302576207,
+    "decode_ms": 36.80488903822455,
+    "decode_std": 0.23710075615583154,
+    "mem_gb": 3.087429632
+  },
+  {
+    "model_id": "Qwen/Qwen2-1.5B",
+    "gpu_pct": 50,
+    "input_len": 512,
+    "prefill_ms": 65.18997698731255,
+    "prefill_std": 0.0468076667602509,
+    "decode_ms": 36.66538865703236,
+    "decode_std": 0.05084892386626729,
+    "mem_gb": 3.087429632
+  },
+  {
+    "model_id": "Qwen/Qwen2-1.5B",
+    "gpu_pct": 60,
+    "input_len": 512,
+    "prefill_ms": 52.945967006962746,
+    "prefill_std": 0.08038150045398962,
+    "decode_ms": 36.03631441170971,
+    "decode_std": 0.3021404244197404,
+    "mem_gb": 3.087429632
+  },
+  {
+    "model_id": "Qwen/Qwen2-1.5B",
+    "gpu_pct": 70,
+    "input_len": 512,
+    "prefill_ms": 56.47025426151231,
+    "prefill_std": 1.248071585822089,
+    "decode_ms": 46.55005066354837,
+    "decode_std": 0.2635881150152775,
+    "mem_gb": 3.087429632
+  },
+  {
+    "model_id": "Qwen/Qwen2-1.5B",
+    "gpu_pct": 80,
+    "input_len": 512,
+    "prefill_ms": 48.44940922339447,
+    "prefill_std": 0.0630912023254474,
+    "decode_ms": 36.65970129028816,
+    "decode_std": 0.048508515590373266,
+    "mem_gb": 3.087429632
+  },
+  {
+    "model_id": "Qwen/Qwen2-1.5B",
+    "gpu_pct": 90,
+    "input_len": 512,
+    "prefill_ms": 43.652406238834374,
+    "prefill_std": 0.17823612182657203,
+    "decode_ms": 36.60309524372375,
+    "decode_std": 0.0680520175707487,
+    "mem_gb": 3.087429632
+  },
+  {
+    "model_id": "Qwen/Qwen2-1.5B",
+    "gpu_pct": 100,
+    "input_len": 512,
+    "prefill_ms": 44.730931520462036,
+    "prefill_std": 0.13448817866460278,
+    "decode_ms": 37.48027579131303,
+    "decode_std": 0.07268139823130185,
+    "mem_gb": 3.087429632
+  },
+  {
+    "model_id": "microsoft/phi-2",
+    "gpu_pct": 20,
+    "input_len": 512,
+    "prefill_ms": 181.66356098663528,
+    "prefill_std": 0.06250076916811477,
+    "decode_ms": 30.832034090902503,
+    "decode_std": 0.022469635292243505,
+    "mem_gb": 5.559368704
+  },
+  {
+    "model_id": "microsoft/phi-2",
+    "gpu_pct": 30,
+    "input_len": 512,
+    "prefill_ms": 128.90513001184445,
+    "prefill_std": 0.045883795161155275,
+    "decode_ms": 28.352361237436224,
+    "decode_std": 0.037762795333182345,
+    "mem_gb": 5.559368704
+  },
+  {
+    "model_id": "microsoft/phi-2",
+    "gpu_pct": 40,
+    "input_len": 512,
+    "prefill_ms": 97.7184272633167,
+    "prefill_std": 0.062072769763657214,
+    "decode_ms": 27.33344260971838,
+    "decode_std": 0.05630396200810539,
+    "mem_gb": 5.559368704
+  },
+  {
+    "model_id": "microsoft/phi-2",
+    "gpu_pct": 50,
+    "input_len": 512,
+    "prefill_ms": 74.39273550699,
+    "prefill_std": 0.017812657516474557,
+    "decode_ms": 28.64850132609718,
+    "decode_std": 0.07472921582298261,
+    "mem_gb": 5.559368704
+  },
+  {
+    "model_id": "microsoft/phi-2",
+    "gpu_pct": 60,
+    "input_len": 512,
+    "prefill_ms": 71.79514874587767,
+    "prefill_std": 0.03175415299500989,
+    "decode_ms": 35.86410986754345,
+    "decode_std": 0.026073008746152974,
+    "mem_gb": 5.559368704
+  },
+  {
+    "model_id": "microsoft/phi-2",
+    "gpu_pct": 70,
+    "input_len": 512,
+    "prefill_ms": 63.374970995937474,
+    "prefill_std": 0.021608310841663727,
+    "decode_ms": 27.975864975693792,
+    "decode_std": 0.029914554017068478,
+    "mem_gb": 5.559368704
+  },
+  {
+    "model_id": "microsoft/phi-2",
+    "gpu_pct": 80,
+    "input_len": 512,
+    "prefill_ms": 59.955152741167694,
+    "prefill_std": 0.04095233066035234,
+    "decode_ms": 37.1370424356428,
+    "decode_std": 0.07091515453704182,
+    "mem_gb": 5.559368704
+  },
+  {
+    "model_id": "microsoft/phi-2",
+    "gpu_pct": 90,
+    "input_len": 512,
+    "prefill_ms": 58.32401324005332,
+    "prefill_std": 0.029994142760227153,
+    "decode_ms": 28.791284869172767,
+    "decode_std": 0.029912415405748356,
+    "mem_gb": 5.559368704
+  },
+  {
+    "model_id": "microsoft/phi-2",
+    "gpu_pct": 100,
+    "input_len": 512,
+    "prefill_ms": 49.78004124131985,
+    "prefill_std": 0.09259679970493244,
+    "decode_ms": 36.81217294603508,
+    "decode_std": 0.054951069497678015,
+    "mem_gb": 5.559368704
+  },
+  {
+    "model_id": "facebook/opt-6.7b",
+    "gpu_pct": 20,
+    "input_len": 512,
+    "prefill_ms": 340.3717480105115,
+    "prefill_std": 0.1804939927070278,
+    "decode_ms": 54.18239332648226,
+    "decode_std": 0.09426771442569049,
+    "mem_gb": 13.316947968
+  },
+  {
+    "model_id": "facebook/opt-6.7b",
+    "gpu_pct": 30,
+    "input_len": 512,
+    "prefill_ms": 242.8240277513396,
+    "prefill_std": 0.16163275067680163,
+    "decode_ms": 36.21366615067625,
+    "decode_std": 0.023751940481703194,
+    "mem_gb": 13.316947968
+  },
+  {
+    "model_id": "facebook/opt-6.7b",
+    "gpu_pct": 40,
+    "input_len": 512,
+    "prefill_ms": 173.10340952826664,
+    "prefill_std": 0.016161171079545095,
+    "decode_ms": 28.232859818187233,
+    "decode_std": 0.0189220469874723,
+    "mem_gb": 13.316947968
+  },
+  {
+    "model_id": "facebook/opt-6.7b",
+    "gpu_pct": 50,
+    "input_len": 512,
+    "prefill_ms": 151.69362600136083,
+    "prefill_std": 0.3104186804501967,
+    "decode_ms": 26.127470631521042,
+    "decode_std": 0.011462248951204982,
+    "mem_gb": 13.316947968
+  },
+  {
+    "model_id": "facebook/opt-6.7b",
+    "gpu_pct": 60,
+    "input_len": 512,
+    "prefill_ms": 124.26720801158808,
+    "prefill_std": 0.1495990994862096,
+    "decode_ms": 22.23539253512475,
+    "decode_std": 0.009988432748118822,
+    "mem_gb": 13.316947968
+  },
+  {
+    "model_id": "facebook/opt-6.7b",
+    "gpu_pct": 70,
+    "input_len": 512,
+    "prefill_ms": 116.25502801325638,
+    "prefill_std": 0.3263471542507285,
+    "decode_ms": 24.462285242043432,
+    "decode_std": 0.011357899319964317,
+    "mem_gb": 13.316947968
+  },
+  {
+    "model_id": "facebook/opt-6.7b",
+    "gpu_pct": 80,
+    "input_len": 512,
+    "prefill_ms": 92.3080622596899,
+    "prefill_std": 0.11837144958993424,
+    "decode_ms": 24.380789198039565,
+    "decode_std": 0.05702133328419305,
+    "mem_gb": 13.316947968
+  },
+  {
+    "model_id": "facebook/opt-6.7b",
+    "gpu_pct": 90,
+    "input_len": 512,
+    "prefill_ms": 92.26281201699749,
+    "prefill_std": 0.5556330328954014,
+    "decode_ms": 21.708999532953992,
+    "decode_std": 0.02487712904134973,
+    "mem_gb": 13.316947968
+  },
+  {
+    "model_id": "facebook/opt-6.7b",
+    "gpu_pct": 100,
+    "input_len": 512,
+    "prefill_ms": 89.64596952137072,
+    "prefill_std": 0.4163276216887435,
+    "decode_ms": 22.86454695907499,
+    "decode_std": 0.01989295327371517,
+    "mem_gb": 13.316947968
+  }
+]

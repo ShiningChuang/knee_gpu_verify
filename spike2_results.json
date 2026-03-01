@@ -1,0 +1,101 @@
+[
+  {
+    "gpu_pct": 20,
+    "layernorm_us": 38.057752535678446,
+    "layernorm_std": 1.2309642841765207,
+    "softmax_us": 24.142335169017315,
+    "softmax_std": 0.6442053653058872,
+    "elem_add_us": 25.44078859500587,
+    "elem_add_std": 0.9410955064398807,
+    "layer_stack_us": 1697.4784212652594,
+    "layer_stack_std": 27.642352243953855
+  },
+  {
+    "gpu_pct": 30,
+    "layernorm_us": 36.12613014411181,
+    "layernorm_std": 1.1978935866805074,
+    "softmax_us": 24.37876129988581,
+    "softmax_std": 0.928535395045366,
+    "elem_add_us": 24.930921499617398,
+    "elem_add_std": 1.0282606553878506,
+    "layer_stack_us": 1600.9454184677452,
+    "layer_stack_std": 11.285599931544581
+  },
+  {
+    "gpu_pct": 40,
+    "layernorm_us": 37.56413934752345,
+    "layernorm_std": 1.5371807187503301,
+    "softmax_us": 25.19168716389686,
+    "softmax_std": 1.1045757113443093,
+    "elem_add_us": 26.636449620127678,
+    "elem_add_std": 0.9795089939308651,
+    "layer_stack_us": 1682.5001616962254,
+    "layer_stack_std": 20.116623793887474
+  },
+  {
+    "gpu_pct": 50,
+    "layernorm_us": 37.639650399796665,
+    "layernorm_std": 1.2707233185896658,
+    "softmax_us": 25.968941627070308,
+    "softmax_std": 1.22899608634674,
+    "elem_add_us": 27.152695110999048,
+    "elem_add_std": 2.5210824675035575,
+    "layer_stack_us": 1721.3887406978756,
+    "layer_stack_std": 14.604098985525503
+  },
+  {
+    "gpu_pct": 60,
+    "layernorm_us": 36.47655947133899,
+    "layernorm_std": 1.226640792932373,
+    "softmax_us": 24.882867583073676,
+    "softmax_std": 1.517727502147821,
+    "elem_add_us": 25.078512844629586,
+    "elem_add_std": 0.9532446647864478,
+    "layer_stack_us": 1659.0719542000443,
+    "layer_stack_std": 13.301190960288302
+  },
+  {
+    "gpu_pct": 70,
+    "layernorm_us": 37.42342640180141,
+    "layernorm_std": 1.0896692362621647,
+    "softmax_us": 25.728821638040245,
+    "softmax_std": 0.9516609194281256,
+    "elem_add_us": 26.317528099752963,
+    "elem_add_std": 0.6822053538699042,
+    "layer_stack_us": 1637.8690616693348,
+    "layer_stack_std": 11.933768860290224
+  },
+  {
+    "gpu_pct": 80,
+    "layernorm_us": 36.13516048062593,
+    "layernorm_std": 1.1527354313161577,
+    "softmax_us": 25.124482926912606,
+    "softmax_std": 0.9930898205435889,
+    "elem_add_us": 26.44177060574293,
+    "elem_add_std": 0.6058688793377474,
+    "layer_stack_us": 1651.4549194835126,
+    "layer_stack_std": 9.222483751820457
+  },
+  {
+    "gpu_pct": 90,
+    "layernorm_us": 36.86007927171886,
+    "layernorm_std": 1.2340493004856548,
+    "softmax_us": 26.182429282926023,
+    "softmax_std": 1.2346831427330527,
+    "elem_add_us": 26.310277171432972,
+    "elem_add_std": 1.2848154737551825,
+    "layer_stack_us": 1728.23651926592,
+    "layer_stack_std": 40.872578329108705
+  },
+  {
+    "gpu_pct": 100,
+    "layernorm_us": 35.05650791339576,
+    "layernorm_std": 1.3887160727873942,
+    "softmax_us": 23.680769372731447,
+    "softmax_std": 1.119442317740903,
+    "elem_add_us": 24.264217354357243,
+    "elem_add_std": 0.9895001809396906,
+    "layer_stack_us": 1587.898813886568,
+    "layer_stack_std": 7.69037724847391
+  }
+]
