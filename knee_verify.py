@@ -220,12 +220,6 @@ def plot(results=None):
     ax1.set_xticks(pcts)
     ax1.legend(fontsize=10)
     ax1.grid(True, alpha=0.35, linestyle="--")
-    ax1.annotate(
-        "Knee: curve flattens → extra SMs give\ndiminishing returns (memory-BW limited)",
-        xy=(0.98, 0.97), xycoords="axes fraction",
-        fontsize=8, color="gray", ha="right", va="top",
-        bbox=dict(boxstyle="round,pad=0.3", fc="lightyellow", ec="gray", alpha=0.8),
-    )
 
     # ── Right: Decode ───────────────────────────────────────────────────
     for i, il in enumerate(input_lens):
@@ -244,12 +238,6 @@ def plot(results=None):
     ax2.set_xticks(pcts)
     ax2.legend(fontsize=10)
     ax2.grid(True, alpha=0.35, linestyle="--")
-    ax2.annotate(
-        "Knee appears very early (~20% SM):\ndecode is memory-BW bound, not compute.\nSpikes at 30%/70%: cuBLAS kernel\nselection anomaly at those SM counts.",
-        xy=(0.98, 0.97), xycoords="axes fraction",
-        fontsize=8, color="gray", ha="right", va="top",
-        bbox=dict(boxstyle="round,pad=0.3", fc="lightyellow", ec="gray", alpha=0.8),
-    )
 
     plt.tight_layout()
     plt.savefig(PLOT_FILE, dpi=150, bbox_inches="tight")
